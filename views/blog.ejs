@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+    .allblogs {
+        width: 75rem;
+        box-shadow: 0px 0px 4px;
+        padding: 1rem;
+        margin-left: 22px;
+        margin-top: 24px;
+        border-radius: 5px;
+        background-color: #101449;
+        color: white;
+
+    }
+
+    .allblogs h1 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .allblogs p {
+        margin-top: 18px;
+    }
+
+    a {
+        text-decoration: none;
+        border: 1px solid white;
+        padding: 0.5rem;
+        color: white;
+        background-color: black;
+        border-radius: 5px;
+
+    }
+
+    .edit {
+        margin-top: 32px;
+        display: flex;
+        gap: 32px;
+        align-items: center;
+    }
+
+    .edit button {
+        padding: 0.6rem;
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+    }
+</style>
+
+<body>
+
+
+    <%b.forEach(e=>{%>
+        <div class="allblogs">
+            <h1>
+                <%=e.blogtitle%>
+            </h1>
+            <p>
+                <%=e.blogcontent%>
+            </p>
+            <div class="edit">
+                <a href="/editblogs">Edit blogs</a>
+
+                <form action="/deleted/<%=e._id%>/delete?_method=delete" method="post">
+                    <button>Delete</button>
+                </form>
+            </div>
+        </div>
+
+        <%})%>
+
+
+</body>
+
+</html>

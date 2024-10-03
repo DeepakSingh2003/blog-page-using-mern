@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #101449;
+    }
+
+    textarea {
+        height: 26rem;
+        width: 75rem;
+        padding: 1rem;
+        margin-left: 16px;
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+        border-radius: 8px;
+
+
+    }
+
+    button {
+        padding: 0.6rem;
+        width: 5rem;
+        margin-top: 22px;
+        margin-left: 16px;
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+        border-radius: 8px;
+    }
+</style>
+
+<body>
+    <%b.forEach(e=>{%>
+        <form action="/editblogs/<%=e._id%>/edit?_method=PUT " method="post">
+            <div class="editblogs">
+                <textarea name="blogcontent" id="" placeholder="<%=e.blogcontent%>""></textarea><br>
+                <button>Submit</button>
+
+            </div>
+        </form>
+        <%})%>
+</body>
+
+</html>

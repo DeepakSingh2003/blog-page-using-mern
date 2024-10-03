@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        background-color: #101449;
+        padding: 1rem;
+        color: white;
+        justify-content: space-between;
+        border-bottom: 1px solid white;
+    }
+
+    .navitems a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
+        padding-right: 32px;
+    }
+
+    .herosection {
+        background-color: #101449;
+        height: 24rem;
+        position: relative;
+        width: 100%;
+    }
+
+    .hcontent {
+        position: absolute;
+        text-align: center;
+        margin-top: 42px;
+        line-height: 94px;
+        font-size: 2rem;
+        margin-left: 26rem;
+    }
+
+    .hcontent h1 {
+        color: white;
+
+    }
+
+    .blogwritting {
+        padding: 2rem;
+        background: white;
+        width: 49rem;
+        border: 1px solid black;
+        transform: translateY(-141px);
+        margin-left: 227px;
+        border-radius: 8px;
+
+    }
+
+    textarea {
+        width: 47rem;
+        height: 12rem;
+        border: 2px solid black;
+        border-radius: 8px;
+        margin-top: 22px;
+        padding: 1rem;
+
+    }
+
+    h2 {
+        font-size: 2rem;
+        color: #101449;
+        text-align: center;
+    }
+
+    #submit {
+        background-color: #343A40;
+        color: white;
+        border: none;
+        padding: 1rem;
+        border-radius: 5px;
+        text-align: center;
+        margin-top: 12px;
+        width: 47rem;
+        transition: all ease 0.5s;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+
+    }
+
+    #submit:hover {
+        background-color: #68B9FB;
+        cursor: pointer;
+        letter-spacing: 5px;
+    }
+
+    #btitle {
+        border: 2px solid black;
+        padding: 0.6rem;
+        border-radius: 5px;
+        width: 20rem;
+        margin-top: 18px;
+    }
+
+    .read {
+        margin-top: -7rem;
+        text-align: center;
+    }
+
+    .read a {
+        text-decoration: none;
+        background-color: #101449;
+        padding: 0.6rem;
+        color: white;
+        font-size: 1.3rem;
+        border-radius: 5px;
+        text-transform: uppercase;
+
+
+    }
+</style>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <h1>My Blog</h1>
+        </div>
+        <div class="navitems">
+            <a href="/">Home</a>
+            <a href="/blogs">Blogs</a>
+            <a href="">Login</a>
+        </div>
+    </div>
+    <div class="herosection">
+        <div class="hcontent">
+            <h1>WELCOME TO</h1>
+            <h1>OUR BLOG</h1>
+        </div>
+    </div>
+    <form action="/submit" method="post">
+        <div class="blogwritting">
+            <h2>Write Your Blog Here</h2>
+            <input type="text" name="btitle" id="btitle" placeholder="Write Blog Title Here">
+            <textarea name="blog" id="" placeholder="Blog Content"></textarea>
+            <input type="submit" id="submit">
+        </div>
+    </form>
+
+    <div class="read">
+        <a href="/blogs">Click here to read our all blogs</a>
+
+    </div>
+</body>
+
+</html>
